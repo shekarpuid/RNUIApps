@@ -69,8 +69,12 @@ const styles = StyleSheet.create({
     bookTicketBtn:{paddingVertical: 14, paddingHorizontal: 24,borderRadius: 40,position: 'absolute', zIndex: 99,right: 16,top: height * 45 / 100 - 25, backgroundColor: '#ff6200', elevation: 5},
     bookTicketText: {color: '#fff', fontWeight: 'bold'},
 
+    // React Native ChartKit Graphs styles
+    graphStyle:{borderRadius: 8, paddingVertical: 10 },
+
     // health app styles
     box1 : {flex : 1,alignItems : 'center',justifyContent : 'center'}
+
 
 
 })

@@ -29,6 +29,7 @@ import DragAndDropFlatlist from './screens/utils/DragAndDropFlatlist'
 import FlatListInfiniteScroll from './components/FlatListInfiniteScroll'
 import HealthApp from './screens/health/HealthApp'
 import HealthDetail from './screens/health/HealthDetail'
+import ChartsApp from './screens/charts/ChartsApp'
 
 // Stacks
 const HomeStack = createStackNavigator()
@@ -36,6 +37,7 @@ const CarouselsStack = createStackNavigator()
 const TravelStack = createStackNavigator()
 const FurnitureStack = createStackNavigator()
 const NikeStack = createStackNavigator()
+const ChartsStack = createStackNavigator()
 const HealthStack = createStackNavigator()
 
 const Drawer = createDrawerNavigator()
@@ -100,6 +102,14 @@ const Routes = () => {
             <FurnitureStack.Screen name="FurnitureApp" component={FurnitureApp} />
             <FurnitureStack.Screen name="FurnitureDetail" component={FurnitureDetail} />
         </FurnitureStack.Navigator>
+    )
+
+ 
+    const ChartsStackNavigator = ({ navigation }) => (
+        <ChartsStack.Navigator screenOptions={{ headerShown: false }}>
+            <ChartsStack.Screen name="ChartsApp" component={ChartsApp} />
+            {/* <ChartsStack.Screen name="ChartsDetail" component={ChartsDetail} /> */}
+        </ChartsStack.Navigator>
     )
 
     const HealthStackNavigator = ({ navigation }) => (
@@ -226,6 +236,7 @@ const Routes = () => {
                     <Drawer.Screen name="FurnitureApp" options={{ title: 'Furniture App' }} component={FurnitureStackNavigator} />
                     <Drawer.Screen name="MovieApp" options={{ title: 'Movie App' }} component={MovieTabNavigator} />
                     <Drawer.Screen name="TravelApp" options={{ title: 'Travel App' }} component={TravelStackNavigator} />
+                    <Drawer.Screen name="ChartsApp" options={{ title: 'Charts App' }} component={ChartsStackNavigator} />
                     <Drawer.Screen name="HealthApp" options={{ title: 'Health App' }} component={HealthStackNavigator} />
                 </Drawer.Navigator>
             </NavigationContainer>

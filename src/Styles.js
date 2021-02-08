@@ -72,6 +72,10 @@ const styles = StyleSheet.create({
     // React Native ChartKit Graphs styles
     graphStyle:{borderRadius: 8, paddingVertical: 10 },
 
+    // health app styles
+    box1 : {flex : 1,alignItems : 'center',justifyContent : 'center'}
+
+
 
 })
 

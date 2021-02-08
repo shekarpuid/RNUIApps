@@ -27,6 +27,7 @@ import MovieProfile from './screens/movie/MovieProfile'
 import MovieDetail from './screens/movie/MovieDetail'
 import DragAndDropFlatlist from './screens/utils/DragAndDropFlatlist'
 import FlatListInfiniteScroll from './components/FlatListInfiniteScroll'
+import ChartsApp from './screens/charts/ChartsApp'
 
 // Stacks
 const HomeStack = createStackNavigator()
@@ -35,6 +36,7 @@ const CarouselsStack = createStackNavigator()
 const TravelStack = createStackNavigator()
 const FurnitureStack = createStackNavigator()
 const NikeStack = createStackNavigator()
+const ChartsStack = createStackNavigator()
 const Drawer = createDrawerNavigator()
 const MovieTab = createBottomTabNavigator()
 
@@ -97,6 +99,13 @@ const Routes = () => {
             <FurnitureStack.Screen name="FurnitureApp" component={FurnitureApp} />
             <FurnitureStack.Screen name="FurnitureDetail" component={FurnitureDetail} />
         </FurnitureStack.Navigator>
+    )
+
+    const ChartsStackNavigator = ({ navigation }) => (
+        <ChartsStack.Navigator screenOptions={{ headerShown: false }}>
+            <ChartsStack.Screen name="ChartsApp" component={ChartsApp} />
+            {/* <ChartsStack.Screen name="ChartsDetail" component={ChartsDetail} /> */}
+        </ChartsStack.Navigator>
     )
 
     const NikeStackNavigator = ({ navigation }) => (
@@ -216,6 +225,7 @@ const Routes = () => {
                     <Drawer.Screen name="FurnitureApp" options={{ title: 'Furniture App' }} component={FurnitureStackNavigator} />
                     <Drawer.Screen name="MovieApp" options={{ title: 'Movie App' }} component={MovieTabNavigator} />
                     <Drawer.Screen name="TravelApp" options={{ title: 'Travel App' }} component={TravelStackNavigator} />
+                    <Drawer.Screen name="ChartsApp" options={{ title: 'Charts App' }} component={ChartsStackNavigator} />
                 </Drawer.Navigator>
             </NavigationContainer>
         </>
